@@ -1,0 +1,13 @@
+<svg viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg">
+    <!-- Akviyol Icon -->
+    <g>
+        <!-- Outer swoosh -->
+        <path d="M15,55 Q5,45 8,30 Q12,12 30,8 Q40,5 48,12 L42,18 Q37,13 30,15 Q18,18 15,30 Q13,40 20,48 Z" fill="#1a1a1a" />
+        <!-- Inner swoosh -->
+        <path d="M20,50 Q28,55 38,52 Q50,48 55,35 Q58,25 50,18 L56,12 Q65,22 62,38 Q58,52 42,58 Q30,62 18,55 Z" fill="#f47920" />
+        <!-- A letter -->
+        <path d="M28,50 L38,15 L48,50 L43,50 L40,40 L36,40 L33,50 Z M37,35 L39,28 L37,28 Z" fill="#f47920" />
+        <!-- Arrow tip -->
+        <polygon points="52,8 60,2 58,14" fill="#f47920" />
+    </g>
+</svg>

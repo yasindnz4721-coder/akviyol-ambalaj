@@ -208,4 +208,48 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 200);
         });
     });
+
+    // --- Image Modal (Lightbox) ---
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('img01');
+    const captionText = document.getElementById('caption');
+    const closeModal = document.querySelector('.close-modal');
+
+    if (modal && modalImg && captionText) {
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('click', function () {
+                const img = this.querySelector('img');
+                const title = this.querySelector('h3').textContent;
+                const desc = this.querySelector('p').textContent;
+
+                modal.style.display = "block";
+                modalImg.src = img.src;
+                captionText.innerHTML = `<strong>${title}</strong><br>${desc}`;
+                document.body.style.overflow = 'hidden'; // Prevent scroll
+            });
+        });
+
+        const closeImageModal = () => {
+            modal.style.display = "none";
+            document.body.style.overflow = ''; // Restore scroll
+        };
+
+        if (closeModal) {
+            closeModal.onclick = closeImageModal;
+        }
+
+        // Close on click outside
+        modal.onclick = (e) => {
+            if (e.target === modal) {
+                closeImageModal();
+            }
+        };
+
+        // Close on ESC key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.style.display === "block") {
+                closeImageModal();
+            }
+        });
+    }
 });
